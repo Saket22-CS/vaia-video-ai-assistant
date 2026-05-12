@@ -37,3 +37,37 @@ build/
 
 # Ruff
 .ruff_cache/
+
+# Virtual Environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+.env.local
+
+# VS Code
+.vscode/
+
+# Downloads / generated audio
+downloads/
+
+# Vector database
+vector_db/
+
+# Whisper / model cache
+.cache/
+models/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
