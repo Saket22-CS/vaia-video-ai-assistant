@@ -421,47 +421,70 @@ flowchart TD
 
 ## 11. The Streamlit UI
 
-The UI (`app.py`) is built with Streamlit and a fully custom CSS layer that transforms the default appearance into a dark editorial design called **VAIA**.
+The UI (`app.py`) is built with Streamlit and a fully custom CSS layer that transforms the default Streamlit appearance into a premium dark AI dashboard called **VAIA**.
 
 **Design system:**
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--ink` | `#0d0d12` | Page background |
-| `--ink-2` | `#16161f` | Cards, sidebar |
-| `--gold` | `#e8c97a` | Primary accent, buttons |
-| `--teal` | `#5de0c8` | Secondary accent, action items |
-| `--rose` | `#f07090` | Tertiary accent, questions |
-| `DM Serif Display` | Serif | Headings, titles |
-| `DM Mono` | Monospace | Labels, tags, code |
-| `Outfit` | Sans-serif | Body text, UI elements |
+| Token              | Value      | Usage                        |
+| ------------------ | ---------- | ---------------------------- |
+| `--ink`            | `#0d0d12`  | Main background              |
+| `--ink-2`          | `#16161f`  | Sidebar and cards            |
+| `--gold`           | `#e8c97a`  | Primary accent, buttons      |
+| `--teal`           | `#5de0c8`  | Success states, action items |
+| `--rose`           | `#f07090`  | Questions and highlights     |
+| `DM Serif Display` | Serif      | Headings and titles          |
+| `DM Mono`          | Monospace  | Labels, pills, metadata      |
+| `Outfit`           | Sans-serif | Body text and UI elements    |
 
 **UI sections:**
 
-```
+```text
 Sidebar
 ├── VAIA wordmark
-├── YouTube URL / File path input
+├── Video source input
+│   ├── YouTube URL
+│   └── Local file path
 ├── Language selector (english / hinglish)
 ├── Run Analysis button
-├── New Session button (after run)
-├── Live pipeline status (6 steps with animated indicators)
-└── Model info footer
+├── New Session button
+├── Live pipeline monitor
+│   ├── Audio Processing
+│   ├── Transcription
+│   ├── Title Generation
+│   ├── Summarisation
+│   ├── Extraction
+│   └── RAG Engine
+└── Model information footer
 
 Main Area
-├── Hero section (heading + capability pills)
+├── Hero section
+│   ├── AI-powered heading
+│   ├── Description text
+│   └── Capability pills
 ├── [After analysis]
 │   ├── Session title banner
-│   ├── Export Report button (.txt download)
-│   ├── Summary card (with word count + compression %)
-│   ├── Full transcript expander (word count + read time)
-│   ├── Intelligence row: Action Items | Decisions | Questions
-│   └── RAG Chat interface
-│       ├── Chat history (auto-scroll to latest)
-│       ├── Message input + Send button
-│       └── Clear conversation button
-└── [Before analysis] Empty state
+│   ├── Export Report button (.txt)
+│   ├── Summary card
+│   │   ├── Word count
+│   │   └── Compression percentage
+│   ├── Full transcript expander
+│   │   ├── Transcript viewer
+│   │   └── Estimated read time
+│   ├── Meeting Intelligence section
+│   │   ├── Action Items
+│   │   ├── Key Decisions
+│   │   └── Open Questions
+│   ├── Conversational RAG Chat
+│   │   ├── Chat history
+│   │   ├── Message input
+│   │   ├── Send button
+│   │   └── Clear conversation button
+│   └── Custom footer
+│       └── Designed & Engineered by Saket Chaudhary
+└── [Before analysis]
+    └── Empty state screen
 ```
+
 
 ---
 
