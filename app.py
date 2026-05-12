@@ -621,7 +621,55 @@ hr {
         border-color 0.18s ease,
         color 0.18s ease;
 }                             
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */     
             
+.footer {
+    margin-top: 1rem;
+    margin-bottom: -10rem;
+    padding-bottom: 0;
+}
+
+.footer-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--line), transparent);
+    margin-bottom: 1.25rem;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.footer-brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: 0.9rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+}
+
+.footer-sep {
+    color: var(--line);
+    font-size: 0.45rem;
+}
+
+.footer-text {
+    color: var(--muted);
+}
+
+.footer-text strong {
+    color: var(--text-soft);
+    font-weight: 500;
+}
+                                   
 </style>
 """, unsafe_allow_html=True)
 
@@ -1048,3 +1096,17 @@ else:
         </div>
     </div>
     """, unsafe_allow_html=True)
+
+# ─── Footer ─────────────────────────────────────────────────────────────────
+st.markdown("""
+<div class="footer">
+    <div class="footer-line"></div>
+    <div class="footer-content">
+        <span class="footer-brand">VAIA</span>
+        <span class="footer-sep">◆</span>
+        <span class="footer-text">
+            Designed &amp; Engineered by <strong>Saket Chaudhary</strong>
+        </span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
